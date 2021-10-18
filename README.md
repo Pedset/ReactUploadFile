@@ -1,4 +1,4 @@
-Hi, I've chosen the fullstack question to solve. But before testing it you have to set it upp first :)
+But before testing it you have to set it upp first :)
 
 step 1) Setup the node.js server
 
