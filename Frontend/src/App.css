@@ -1,0 +1,11 @@
+.preWrap {
+  white-space: pre-wrap;
+  background: seashell;
+  padding: 20px;
+}
+
+.loadingScreen {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
