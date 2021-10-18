@@ -1,4 +1,4 @@
-But before testing it you have to set it upp first :)
+Before testing it you have to set it upp first :)
 
 step 1) Setup the node.js server
 
