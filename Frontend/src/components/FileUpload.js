@@ -18,7 +18,8 @@ const FileUpload = () => {
      setFile(e.target.files[0]);
      setFilename(e.target.files[0].name);
    } catch(e){
-      setFile(null);
+       setFile("");
+       setFilename("Choose File");
    }
   };
 
@@ -27,11 +28,11 @@ const FileUpload = () => {
     setMessage(null);
     e.preventDefault();
     const formData = new FormData();
-    setLoadingScreen('content/loading.gif');
+    
     if (file !== "") {
       formData.append('name', "file");
       formData.append('file', file);
-      
+      setLoadingScreen('content/loading.gif');
       try {
         const res = await axios.post('http://localhost:3000/user/upload', formData, {
           headers: {
@@ -108,7 +109,7 @@ const FileUpload = () => {
       </form>
       {uploadedFile ? (
             <div className="preWrap" >{uploadedFile.Text}</div>
-      ) : <img className="loadingScreen" src={loadingScreen} alt="Loading"></img>}
+      ) : loadingScreen ? ( <img className="loadingScreen" src={loadingScreen}></img>) : null }
     </Fragment>
   );
 };
